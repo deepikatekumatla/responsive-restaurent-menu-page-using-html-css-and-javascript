@@ -109,31 +109,75 @@ all.addEventListener("click",function(){
      // all.classList.toggle("active");
      for(var i=0 ; i<btns.length ; i++)
      {
-        var current = document.querySelector("active");
+       if(btns[i]!="all")
+       {
+            btns[i].classList.remove("active");
+       }
      }
+     all.classList.add("active");
       display_menu(menu);
 });
 breakfast.addEventListener("click",function(){
     menu = items.filter(food => food.category == "breakfast");
+    for(var i=0 ; i<btns.length ; i++)
+    {
+      if(btns[i]!="breakfast")
+      {
+           btns[i].classList.remove("active");
+      }
+    }
+    breakfast.classList.add("active");
     display_menu(menu);
     
 });
 lunch.addEventListener("click",function(){
     menu = items.filter(food => food.category == "lunch");
+    for(var i=0 ; i<btns.length ; i++)
+    {
+      if(btns[i]!="lunch")
+      {
+           btns[i].classList.remove("active");
+      }
+    }
+    lunch.classList.add("active");
     display_menu(menu);
     
 });
 snacks.addEventListener("click",function(){
     menu = items.filter(food => food.category == "snacks");
+    for(var i=0 ; i<btns.length ; i++)
+    {
+      if(btns[i]!="snacks")
+      {
+           btns[i].classList.remove("active");
+      }
+    }
+    snacks.classList.add("active");
     display_menu(menu);
     
 });
 dinner.addEventListener("click",function(){
     menu = items.filter(food => food.category == "dinner");
+    for(var i=0 ; i<btns.length ; i++)
+    {
+      if(btns[i]!="dinner")
+      {
+           btns[i].classList.remove("active");
+      }
+    }
+    dinner.classList.add("active");
     display_menu(menu);
     
 });
 window.addEventListener("DOMContentLoaded",function(){
+    for(var i=0 ; i<btns.length ; i++)
+    {
+      if(btns[i]!="all")
+      {
+           btns[i].classList.remove("active");
+      }
+    }
+    all.classList.add("active");
     display_menu(menu);
 });
 function display_menu(menu)
